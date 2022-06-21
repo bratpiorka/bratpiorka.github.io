@@ -1,7 +1,7 @@
 <!doctype html><html dir=ltr lang=en-us><head>
 <link rel=stylesheet type=text/css href=/css/style.css>
 <meta property="og:title" content="Memory Tiering (part 1)">
-<meta property="og:description" content="Extending memory capacity with PMEM Databases such as Redis (an in-memory key-value open-source database) consume a lot of memory. Since fast access is essential for them, they use DRAM to store their data. DRAM is quite expensive and has limited capacity, so a solution we propose in this blog post is to use PMEM (and in the future other types of memory available through CXL - see a pmem.io blog post about it).">
+<meta property="og:description" content="Extending memory capacity with PMEM Databases such as Redis (an in-memory key-value open-source database) consume a lot of memory. Since fast access is essential for them, they use DRAM to store their data. DRAM is quite expensive and has limited capacity, so a solution we propose in this blog post is to use PMEM (and in the future other types of memory available through CXL - see pmem.io blog post about it here).">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pmem.io/blog/2022/06/memory-tiering-part-1/"><meta property="article:section" content="blog">
 <meta property="article:published_time" content="2022-06-21T00:00:00+00:00">
@@ -311,7 +311,7 @@ PMDK
 <p>Databases such as <a href=https://github.com/redis/redis>Redis</a> (an in-memory key-value open-source database) consume a lot of memory.
 Since fast access is essential for them, they use DRAM to store their data.
 DRAM is quite expensive and has limited capacity, so a solution we propose in this blog post is to use PMEM
-(and in the future other types of memory available through CXL - see a <a href=/blog/2022/01/disaggregated-memory-in-pursuit-of-scale-and-efficiency>pmem.io blog post about it</a>).
+(and in the future other types of memory available through CXL - see pmem.io blog post about it <a href=/blog/2022/01/disaggregated-memory-in-pursuit-of-scale-and-efficiency>here</a>).
 PMEM can be used in two modes - <a href=/glossary/#memory-mode>Memory Mode</a> and <a href=/glossary/#app-direct>App Direct</a>. In Memory Mode,
 user sees DRAM and PMEM memory as single, combined memory node. In App Direct mode,
 when you <a href=/blog/2020/01/memkind-support-for-kmem-dax-option>configure PMEM as KMEM DAX</a>, the PMEM memory will be directly available in the system and visible
@@ -414,7 +414,7 @@ functions to allocate data on specific NUMA nodes, and much more.
 This way, the application can identify NUMA nodes with specific properties
 and decide which data suits best which NUMA node. What is important,
 functions allocating on specific NUMA nodes are relatively slow compared
-to their counterparts from the standard glibc library, because they operate on whole pages.
+to their counterparts from the standard glibc library, because it operates on whole pages.
 More details about the libnuma library could be found <a href=https://man7.org/linux/man-pages/man3/numa.3.html>here</a>.</p>
 <h3 id=memkind-library>Memkind library</h3>
 <p>The <a href=https://github.com/memkind/memkind>Memkind</a> library allows allocating data directly on different memory tiers
