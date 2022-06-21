@@ -2,7 +2,7 @@
 <link rel=stylesheet type=text/css href=/css/style.css>
 <meta property="og:title" content="Memkind support for heterogeneous memory attributes">
 <meta property="og:description" content="Introduction Memkind is a library mostly associated with enabling Persistent Memory. However, it is not the only type of memory that memkind supports. The library is a general solution designed for platforms with heterogeneous memory.
-But before we delve into heterogenous memory itself, let&rsquo;s start with a short recap about NUMA. The NUMA concept solved the problem of a dynamic extension of the CPU count per socket and system memory. Before NUMA, Uniform Memory Access (UMA) was a common model, in which all processors shared physical memory uniformly.">
+But before we delve into heterogeneous memory itself, let&rsquo;s start with a short recap about NUMA. The NUMA concept solved the problem of a dynamic extension of the CPU count per socket and system memory. Before NUMA, Uniform Memory Access (UMA) was a common model, in which all processors shared physical memory uniformly.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pmem.io/blog/2021/05/memkind-support-for-heterogeneous-memory-attributes/"><meta property="article:section" content="blog">
 <meta property="article:published_time" content="2021-05-12T19:55:17-07:00">
@@ -106,18 +106,18 @@ But before we delve into heterogenous memory itself, let&rsquo;s start with a sh
 <div class="mega-menu-column sub-menu-container col-lg-4 border-bottom py-4">
 <div class=feature-box>
 <div class="fbox-content h-bg-light">
-<a href=https://memkeydb.io>
-<p>MemKeyDB <i class=icon-angle-right></i></p>
-</a>
-</div>
-<div class="fbox-content h-bg-light">
 <a href=http://memkind.github.io/memkind/>
-<p>MemKind <i class=icon-angle-right></i></p>
+<p>Memkind <i class=icon-angle-right></i></p>
 </a>
 </div>
 <div class="fbox-content h-bg-light">
 <a href=/community/#newsletter>
 <p>Newsletter <i class=icon-angle-right></i></p>
+</a>
+</div>
+<div class="fbox-content h-bg-light">
+<a href=https://tieredmemdb.github.io/>
+<p>TieredMemDB <i class=icon-angle-right></i></p>
 </a>
 </div>
 </div>
@@ -309,10 +309,10 @@ Memkind
 </div>
 <div class="entry-content mt-0">
 <h3 id=introduction>Introduction</h3>
-<p>Memkind is a library mostly associated with enabling <a href=https://pmem.io/blog/2020/01/introduction-to-libmemkind>Persistent Memory</a>.
+<p>Memkind is a library mostly associated with enabling <a href=/blog/2020/01/introduction-to-libmemkind>Persistent Memory</a>.
 However, it is not the only type of memory that memkind supports.
 The library is a general solution designed for platforms with heterogeneous memory.</p>
-<p>But before we delve into heterogenous memory itself, let&rsquo;s start with a short recap about <a href=https://software.intel.com/content/www/us/en/develop/articles/optimizing-applications-for-numa.html>NUMA</a>.
+<p>But before we delve into heterogeneous memory itself, let&rsquo;s start with a short recap about <a href=https://software.intel.com/content/www/us/en/develop/articles/optimizing-applications-for-numa.html>NUMA</a>.
 The NUMA concept solved the problem of a dynamic extension of the CPU count per socket and system memory.
 Before NUMA, Uniform Memory Access (UMA) was a common model, in which all processors shared physical memory uniformly.
 With the UMA approach and a rapid growth of a number of processors and memory in multi-socket machines, platforms faced scalability problems.
@@ -341,7 +341,7 @@ doesn&rsquo;t have to contain both memory (typically DRAM) and a processing unit
 For example, we can have a memory-only NUMA Node (hot-plugged memory device), which cannot generate memory requests and contains only memory.</p>
 <p>Today&rsquo;s hardware used in platforms is constantly evolving with a broad spectrum of device changes on each level: previously mentioned
 <code>processing units</code>, come in the form of, e.g., CPU, GPU, or FPGA. The <code>storage class devices</code> in the form of, e.g., HDD or <a href=https://www.intel.com/content/www/us/en/products/memory-storage/solid-state-drives/data-center-ssds/optane-dc-ssd-series.html>SSD</a>.
-Finally, the <code>memory class devices</code> are provided by physical mediums like DRAM, PMEM, or <a href=https://software.intel.com/content/www/us/en/develop/blogs/an-intro-to-mcdram-high-bandwidth-memory-on-knights-landing.html>MCDRAM</a>.</p>
+Finally, the <code>memory class devices</code> are provided by physical mediums like DRAM, PMEM, or <a href=https://www.intel.com/content/www/us/en/developer/articles/technical/multi-channel-dram-mcdram-and-high-bandwidth-memory-hbm.html>MCDRAM</a>.</p>
 <p>This post focuses on the last aspect of mentioned varieties - on <strong>heterogeneous memory</strong>.</p>
 <figure class=image>
 <img src=/images/posts/heterogeneous_architecture.png alt="PMEM KMEM-DAX">
@@ -596,17 +596,24 @@ The support for them is available in the Linux Kernel 5.5.</p>
 <div class="widget clearfix">
 <h4>Tag Cloud</h4>
 <div class=tagcloud>
-<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/pmem class=block role=button>pmem</a>
+<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/ndctl class=block role=button>ndctl</a>
 <a href=/tags/daxctl class=block role=button>daxctl</a>
+<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/async class=block role=button>async</a>
+<a href=/tags/asynchronous class=block role=button>asynchronous</a>
+<a href=/tags/concurrency class=block role=button>concurrency</a>
 <a href=/tags/configure class=block role=button>configure</a>
 <a href=/tags/dax class=block role=button>dax</a>
 <a href=/tags/install class=block role=button>install</a>
-<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/miniasync class=block role=button>miniasync</a>
 <a href=/tags/setup class=block role=button>setup</a>
+<a href=/tags/dml class=block role=button>dml</a>
+<a href=/tags/dsa class=block role=button>dsa</a>
 <a href=/tags/faq class=block role=button>faq</a>
 <a href=/tags/imdb class=block role=button>imdb</a>
+<a href=/tags/pmem2 class=block role=button>pmem2</a>
 <a href=/tags/sanitize class=block role=button>sanitize</a>
 <a href=/tags/secure-erase class=block role=button>secure-erase</a>
 <a href=/tags/sql class=block role=button>sql</a>
@@ -614,18 +621,11 @@ The support for them is available in the Linux Kernel 5.5.</p>
 <a href=/tags/blogs class=block role=button>blogs</a>
 <a href=/tags/crash class=block role=button>crash</a>
 <a href=/tags/create class=block role=button>create</a>
+<a href=/tags/cxl class=block role=button>cxl</a>
 <a href=/tags/database class=block role=button>database</a>
 <a href=/tags/destroy class=block role=button>destroy</a>
 <a href=/tags/developer class=block role=button>developer</a>
 <a href=/tags/direct-access class=block role=button>direct-access</a>
-<a href=/tags/emulate class=block role=button>emulate</a>
-<a href=/tags/fpga class=block role=button>fpga</a>
-<a href=/tags/fsck class=block role=button>fsck</a>
-<a href=/tags/gpu class=block role=button>gpu</a>
-<a href=/tags/hang class=block role=button>hang</a>
-<a href=/tags/how-to class=block role=button>how-to</a>
-<a href=/tags/howto class=block role=button>howto</a>
-<a href=/tags/in-memory-database class=block role=button>in-memory-database</a>
 </div>
 </div>
 </div>
@@ -657,7 +657,7 @@ The support for them is available in the Linux Kernel 5.5.</p>
 <a href=https://pmem.io/terms.html>Terms</a>
 </div>
 <div class="col-lg-auto text-center mt-0">
-<p>Copyright &copy; 2021 pmem.io</p>
+<p>Copyright &copy; 2022 pmem.io</p>
 </div>
 </div>
 </div>

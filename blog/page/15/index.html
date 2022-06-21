@@ -103,18 +103,18 @@
 <div class="mega-menu-column sub-menu-container col-lg-4 border-bottom py-4">
 <div class=feature-box>
 <div class="fbox-content h-bg-light">
-<a href=https://memkeydb.io>
-<p>MemKeyDB <i class=icon-angle-right></i></p>
-</a>
-</div>
-<div class="fbox-content h-bg-light">
 <a href=http://memkind.github.io/memkind/>
-<p>MemKind <i class=icon-angle-right></i></p>
+<p>Memkind <i class=icon-angle-right></i></p>
 </a>
 </div>
 <div class="fbox-content h-bg-light">
 <a href=/community/#newsletter>
 <p>Newsletter <i class=icon-angle-right></i></p>
+</a>
+</div>
+<div class="fbox-content h-bg-light">
+<a href=https://tieredmemdb.github.io/>
+<p>TieredMemDB <i class=icon-angle-right></i></p>
 </a>
 </div>
 </div>
@@ -302,26 +302,26 @@
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-0-new-programming-model/ data-lightbox=image><img src=/images/pmem_logo.png alt="An introduction to pmemobj (part 0) - new programming model"></a>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-5-atomic-dynamic-memory-allocation/ data-lightbox=image><img src=/images/pmem_logo.png alt="An introduction to pmemobj (part 5) - atomic dynamic memory allocation"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-0-new-programming-model/>An introduction to pmemobj (part 0) - new programming model</a></h2>
+<h2><a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-5-atomic-dynamic-memory-allocation/>An introduction to pmemobj (part 5) - atomic dynamic memory allocation</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> Jun 12, 2015</li>
+<li><i class=icon-calendar3></i> Jun 18, 2015</li>
 <li><i class=icon-user></i>Pbalcer</li>
 <li>
 <i class=icon-folder-open></i>
-Model
+Libpmemobj
 </li>
 </ul>
 </div>
 <div class=entry-content>
-<p>The aim of this tutorial series is to introduce you to programming with persistent, byte-addressable memory using the pmemobj library. We will go over all the available features, implement an example application and learn something about the inner workings of libpmemobj. If you haven’t read …</p>
-<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-0-new-programming-model/ class=more-link>Read More</a>
+<p>In the previous post I talked about using transactions for allocating new objects, which is fine and is the most similar approach to the standard POSIX way. But it does add an overhead of maintaining an undo log of changes. A more optimal memory management can be achieved using the non-transactional …</p>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-5-atomic-dynamic-memory-allocation/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -332,57 +332,26 @@ Model
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2015/06/type-safety-macros-in-libpmemobj/ data-lightbox=image><img src=/images/pmem_logo.png alt="Type safety macros in libpmemobj"></a>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-6-threading/ data-lightbox=image><img src=/images/pmem_logo.png alt="An introduction to pmemobj (part 6) - threading"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2015/06/type-safety-macros-in-libpmemobj/>Type safety macros in libpmemobj</a></h2>
+<h2><a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-6-threading/>An introduction to pmemobj (part 6) - threading</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> Jun 11, 2015</li>
-<li><i class=icon-user></i>Plebioda</li>
-<li>
-<i class=icon-folder-open></i>
-Macros
-</li>
-</ul>
-</div>
-<div class=entry-content>
-<p>The PMEMoid plays the role of a persistent pointer in a pmemobj pool. It consist of a shortened UUID of the pool which the object comes from and an offset relative to the beginning of the pool:
-1 2 3 4 typedef struct pmemoid { uint64_t pool_uuid_lo; uint64_t off; } PMEMoid; Operating on such …</p>
-<a href=https://pmem.io/blog/2015/06/type-safety-macros-in-libpmemobj/ class=more-link>Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id=posts class="row grid-container gutter-40">
-<div class="entry col-12">
-<div class="grid-inner row g-0">
-<div class=col-md-4>
-<div class=entry-image>
-<a href=https://pmem.io/blog/2015/06/implementing-simple-mysql-storage-engine-with-libpmemobj/ data-lightbox=image><img src=/images/pmem_logo.png alt="Implementing (simple) MySQL storage engine with libpmemobj"></a>
-</div>
-</div>
-<div class="col-md-8 ps-md-4">
-<div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2015/06/implementing-simple-mysql-storage-engine-with-libpmemobj/>Implementing (simple) MySQL storage engine with libpmemobj</a></h2>
-</div>
-<div class=entry-meta>
-<ul>
-<li><i class=icon-calendar3></i> Jun 2, 2015</li>
+<li><i class=icon-calendar3></i> Jun 18, 2015</li>
 <li><i class=icon-user></i>Pbalcer</li>
 <li>
 <i class=icon-folder-open></i>
-Mysql
+Libpmemobj
 </li>
 </ul>
 </div>
 <div class=entry-content>
-<p>The focus of the pmemobj library, like the name suggests, is storing objects on a persistent medium. A different, but very common, approach of doing exactly the same is to use a database with a specialized interface to manipulate the collection of data. MySQL is one such database, it processes SQL …</p>
-<a href=https://pmem.io/blog/2015/06/implementing-simple-mysql-storage-engine-with-libpmemobj/ class=more-link>Read More</a>
+<p>All of the pmemobj library functions are thread-safe, with following two exceptions: pool management functions (open, close and friends) and pmemobj_root when providing different sizes in different threads - so as long as you are using this function the way it’s meant to be used you …</p>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-6-threading/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -393,26 +362,27 @@ Mysql
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2014/09/using-the-block-translation-table-for-sector-atomicity/ data-lightbox=image><img src=/images/pmem_logo.png alt="Using the Block Translation Table for sector atomicity"></a>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-4-transactional-dynamic-memory-allocation/ data-lightbox=image><img src=/images/pmem_logo.png alt="An introduction to pmemobj (part 4) - transactional dynamic memory allocation"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2014/09/using-the-block-translation-table-for-sector-atomicity/>Using the Block Translation Table for sector atomicity</a></h2>
+<h2><a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-4-transactional-dynamic-memory-allocation/>An introduction to pmemobj (part 4) - transactional dynamic memory allocation</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> Sep 23, 2014</li>
-<li><i class=icon-user></i>Stellarhopper</li>
+<li><i class=icon-calendar3></i> Jun 17, 2015</li>
+<li><i class=icon-user></i>Pbalcer</li>
 <li>
 <i class=icon-folder-open></i>
-Translation
+Libpmemobj
 </li>
 </ul>
 </div>
 <div class=entry-content>
-<p>Persistent memory based storage is able to perform IO at byte (or more accurately, cache line) granularity. However, we often want to expose such storage as traditional block devices. The block drivers for persistent memory will do exactly this. However, they do not provide any atomicity guarantees. …</p>
-<a href=https://pmem.io/blog/2014/09/using-the-block-translation-table-for-sector-atomicity/ class=more-link>Read More</a>
+<p>This is a topic I intentionally avoided not to introduce too much complexity too fast. The pmemobj library contains an implemented from scratch memory allocator, that was designed with persistent memory in mind. There are two separate APIs: non-transactional and transactional.
+Transactional …</p>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-4-transactional-dynamic-memory-allocation/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -423,27 +393,56 @@ Translation
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2014/09/git-workflow/ data-lightbox=image><img src=/images/pmem_logo.png alt="Git Workflow"></a>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-3-types/ data-lightbox=image><img src=/images/pmem_logo.png alt="An introduction to pmemobj (part 3) - types"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2014/09/git-workflow/>Git Workflow</a></h2>
+<h2><a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-3-types/>An introduction to pmemobj (part 3) - types</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> Sep 9, 2014</li>
-<li><i class=icon-user></i>Andyrudoff</li>
+<li><i class=icon-calendar3></i> Jun 16, 2015</li>
+<li><i class=icon-user></i>Pbalcer</li>
 <li>
 <i class=icon-folder-open></i>
-Git
+Libpmemobj
 </li>
 </ul>
 </div>
 <div class=entry-content>
-<p>Now that we’ve created the GitHub Repository for the PMDK, here’s a more detailed description of the git workflow we’ve chosen. The basic idea is:
-Current development happens on the master branch Releases are created periodically by tagging After a major release, a stable-1.x …</p>
-<a href=https://pmem.io/blog/2014/09/git-workflow/ class=more-link>Read More</a>
+<p>In all of the previous post the code snippets and examples had persistent pointers (PMEMoid) without any type information - they were simple C structures. Very early in the development of the library we discovered that using something like that was extremely error-prone and generally difficult. …</p>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-3-types/ class=more-link>Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=posts class="row grid-container gutter-40">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class=col-md-4>
+<div class=entry-image>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-2-transactions/ data-lightbox=image><img src=/images/pmem_logo.png alt="An introduction to pmemobj (part 2) - transactions"></a>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2><a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-2-transactions/>An introduction to pmemobj (part 2) - transactions</a></h2>
+</div>
+<div class=entry-meta>
+<ul>
+<li><i class=icon-calendar3></i> Jun 15, 2015</li>
+<li><i class=icon-user></i>Pbalcer</li>
+<li>
+<i class=icon-folder-open></i>
+Libpmemobj
+</li>
+</ul>
+</div>
+<div class=entry-content>
+<p>By now you should be fairly familiar with the basics persistent memory programming, but to make sure the application is always in a consistent state you had to rely on your own solutions and tricks - like the length of a buffer in the previous example. Now, we will learn a generic solution provided …</p>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-2-transactions/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -458,9 +457,6 @@ Current development happens on the master branch Releases are created periodical
 <a href=/blog/page/14/ aria-label=Previous class=page-link role=button><span aria-hidden=true>&#171;</span></a>
 </li>
 <li class=page-item>
-<a href=/blog/page/12/ aria-label="Page 12" class=page-link role=button>12</a>
-</li>
-<li class=page-item>
 <a href=/blog/page/13/ aria-label="Page 13" class=page-link role=button>13</a>
 </li>
 <li class=page-item>
@@ -473,10 +469,13 @@ Current development happens on the master branch Releases are created periodical
 <a href=/blog/page/16/ aria-label="Page 16" class=page-link role=button>16</a>
 </li>
 <li class=page-item>
+<a href=/blog/page/17/ aria-label="Page 17" class=page-link role=button>17</a>
+</li>
+<li class=page-item>
 <a href=/blog/page/16/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/blog/page/16/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/blog/page/18/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></div>
 </div>
@@ -505,24 +504,26 @@ Current development happens on the master branch Releases are created periodical
 <h4 class="fw-normal mt-2"><a href=/blogs/llpl/ class=text-capitalize>llpl (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/macros/ class=text-capitalize>macros (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/memcpy/ class=text-capitalize>memcpy (1)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/memkeydb/ class=text-capitalize>memkeydb (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/memkind/ class=text-capitalize>memkind (4)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/model/ class=text-capitalize>model (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/multithreaded/ class=text-capitalize>multithreaded (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/mysql/ class=text-capitalize>mysql (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/perf300/ class=text-capitalize>perf300 (2)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/performance/ class=text-capitalize>performance (1)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (7)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (11)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem/ class=text-capitalize>pmem (4)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem.io/ class=text-capitalize>pmem.io (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem_emulation/ class=text-capitalize>pmem_emulation (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmemcheck/ class=text-capitalize>pmemcheck (2)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmemkv/ class=text-capitalize>pmemkv (5)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmemobjfs/ class=text-capitalize>pmemobjfs (1)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/pmemstream/ class=text-capitalize>pmemstream (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmreorder/ class=text-capitalize>pmreorder (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pool_features/ class=text-capitalize>pool_features (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/replication/ class=text-capitalize>replication (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/report/ class=text-capitalize>report (4)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/similaritysearch/ class=text-capitalize>similaritysearch (1)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/tieredmemdb/ class=text-capitalize>tieredmemdb (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/translation/ class=text-capitalize>translation (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/vmem/ class=text-capitalize>vmem (1)</a></h4>
 </div>
@@ -534,17 +535,24 @@ Current development happens on the master branch Releases are created periodical
 <div class="widget clearfix">
 <h4>Tag Cloud</h4>
 <div class=tagcloud>
-<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/pmem class=block role=button>pmem</a>
+<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/ndctl class=block role=button>ndctl</a>
 <a href=/tags/daxctl class=block role=button>daxctl</a>
+<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/async class=block role=button>async</a>
+<a href=/tags/asynchronous class=block role=button>asynchronous</a>
+<a href=/tags/concurrency class=block role=button>concurrency</a>
 <a href=/tags/configure class=block role=button>configure</a>
 <a href=/tags/dax class=block role=button>dax</a>
 <a href=/tags/install class=block role=button>install</a>
-<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/miniasync class=block role=button>miniasync</a>
 <a href=/tags/setup class=block role=button>setup</a>
+<a href=/tags/dml class=block role=button>dml</a>
+<a href=/tags/dsa class=block role=button>dsa</a>
 <a href=/tags/faq class=block role=button>faq</a>
 <a href=/tags/imdb class=block role=button>imdb</a>
+<a href=/tags/pmem2 class=block role=button>pmem2</a>
 <a href=/tags/sanitize class=block role=button>sanitize</a>
 <a href=/tags/secure-erase class=block role=button>secure-erase</a>
 <a href=/tags/sql class=block role=button>sql</a>
@@ -552,18 +560,11 @@ Current development happens on the master branch Releases are created periodical
 <a href=/tags/blogs class=block role=button>blogs</a>
 <a href=/tags/crash class=block role=button>crash</a>
 <a href=/tags/create class=block role=button>create</a>
+<a href=/tags/cxl class=block role=button>cxl</a>
 <a href=/tags/database class=block role=button>database</a>
 <a href=/tags/destroy class=block role=button>destroy</a>
 <a href=/tags/developer class=block role=button>developer</a>
 <a href=/tags/direct-access class=block role=button>direct-access</a>
-<a href=/tags/emulate class=block role=button>emulate</a>
-<a href=/tags/fpga class=block role=button>fpga</a>
-<a href=/tags/fsck class=block role=button>fsck</a>
-<a href=/tags/gpu class=block role=button>gpu</a>
-<a href=/tags/hang class=block role=button>hang</a>
-<a href=/tags/how-to class=block role=button>how-to</a>
-<a href=/tags/howto class=block role=button>howto</a>
-<a href=/tags/in-memory-database class=block role=button>in-memory-database</a>
 </div>
 </div>
 </div>
@@ -595,7 +596,7 @@ Current development happens on the master branch Releases are created periodical
 <a href=https://pmem.io/terms.html>Terms</a>
 </div>
 <div class="col-lg-auto text-center mt-0">
-<p>Copyright &copy; 2021 pmem.io</p>
+<p>Copyright &copy; 2022 pmem.io</p>
 </div>
 </div>
 </div>

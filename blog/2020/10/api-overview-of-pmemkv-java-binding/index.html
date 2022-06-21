@@ -106,18 +106,18 @@ We built an API for pmemkv-java binding on top of libpmemkv 1.0 API, but java bi
 <div class="mega-menu-column sub-menu-container col-lg-4 border-bottom py-4">
 <div class=feature-box>
 <div class="fbox-content h-bg-light">
-<a href=https://memkeydb.io>
-<p>MemKeyDB <i class=icon-angle-right></i></p>
-</a>
-</div>
-<div class="fbox-content h-bg-light">
 <a href=http://memkind.github.io/memkind/>
-<p>MemKind <i class=icon-angle-right></i></p>
+<p>Memkind <i class=icon-angle-right></i></p>
 </a>
 </div>
 <div class="fbox-content h-bg-light">
 <a href=/community/#newsletter>
 <p>Newsletter <i class=icon-angle-right></i></p>
+</a>
+</div>
+<div class="fbox-content h-bg-light">
+<a href=https://tieredmemdb.github.io/>
+<p>TieredMemDB <i class=icon-angle-right></i></p>
 </a>
 </div>
 </div>
@@ -310,15 +310,15 @@ Pmemkv
 <div class="entry-content mt-0">
 <p>Pmemkv is a key-value data store written in C and C++, however, it also opens up
 a way to leverage persistent memory by developers who prefer high-level languages - such as Java.
-For more information about other bindings please read <a href=https://pmem.io/blog/2020/03/language-bindings-for-pmemkv/>Language bindings for pmemkv</a>
+For more information about other bindings please read <a href=/blog/2020/03/language-bindings-for-pmemkv/>Language bindings for pmemkv</a>
 article and <a href=https://github.com/pmem/pmemkv/#language-bindings>pmemkv README</a></p>
 <p>We built an API for pmemkv-java binding on top of libpmemkv 1.0 API, but java binding
 is also compatible with newer versions of libpmemkv. You don’t have to worry
 about the dependencies, because packages from the OS vendor’s repositories suffice.</p>
 <h3 id=examples>Examples</h3>
 <p><a href=https://github.com/pmem/pmemkv-java/tree/master/examples>Examples directory</a> in pmemkv-java repository is a good resource, where you may learn how to
-create pmemkv database and use it with different types of data; starting from simple <a href=https://github.com/pmem/pmemkv-java/blob/master/examples/ByteBufferExample.java>ByteBuffer</a>,
-up to little bit more <a href=https://github.com/pmem/pmemkv-java/blob/master/examples/PicturesExample.java>real-life-application</a>, which shows you how to store and display pictures.</p>
+create pmemkv database and use it with different types of data; starting from simple <a href=https://github.com/pmem/pmemkv-java/blob/master/examples/ByteBufferExample/src/main/java/ByteBufferExample.java>ByteBuffer</a>,
+up to little bit more <a href=https://github.com/pmem/pmemkv-java/blob/master/examples/PicturesExample/src/main/java/PicturesExample.java>real-life-application</a>, which shows you how to store and display pictures.</p>
 <h4 id=implementing-converter-class>Implementing Converter class</h4>
 <p>Since pmemkv-java binding is the java wrapper for C++ library, it internally relies on java native interface,
 so it can only store ByteBuffer objects. Because it wouldn&rsquo;t be very convenient to operate on ByteBuffers inside
@@ -339,18 +339,17 @@ instance of any class in pmemkv, as long as an appropriate converter is availabl
 		<span style=color:#f92672>}</span>
 		<span style=color:#66d9ef>return</span> ByteBuffer<span style=color:#f92672>.</span><span style=color:#a6e22e>wrap</span><span style=color:#f92672>(</span>out<span style=color:#f92672>.</span><span style=color:#a6e22e>toByteArray</span><span style=color:#f92672>());</span>
 	<span style=color:#f92672>}</span>
-<pre><code>&lt;span style=&quot;color:#66d9ef&quot;&gt;public&lt;/span&gt; BufferedImage &lt;span style=&quot;color:#a6e22e&quot;&gt;fromByteBuffer&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;(&lt;/span&gt;ByteBuffer entry&lt;span style=&quot;color:#f92672&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;{&lt;/span&gt;
-	BufferedImage out &lt;span style=&quot;color:#f92672&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;null&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;;&lt;/span&gt;
-	&lt;span style=&quot;color:#66d9ef&quot;&gt;try&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;{&lt;/span&gt;
-		out &lt;span style=&quot;color:#f92672&quot;&gt;=&lt;/span&gt; ImageIO&lt;span style=&quot;color:#f92672&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color:#a6e22e&quot;&gt;read&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color:#66d9ef&quot;&gt;new&lt;/span&gt; ByteBufferBackedInputStream&lt;span style=&quot;color:#f92672&quot;&gt;(&lt;/span&gt;entry&lt;span style=&quot;color:#f92672&quot;&gt;));&lt;/span&gt;
-	&lt;span style=&quot;color:#f92672&quot;&gt;}&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;catch&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;(&lt;/span&gt;IOException e&lt;span style=&quot;color:#f92672&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;{&lt;/span&gt;
-		&lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;null&lt;/span&gt;&lt;span style=&quot;color:#f92672&quot;&gt;;&lt;/span&gt;
-	&lt;span style=&quot;color:#f92672&quot;&gt;}&lt;/span&gt;
-	&lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt; out&lt;span style=&quot;color:#f92672&quot;&gt;;&lt;/span&gt;
-&lt;span style=&quot;color:#f92672&quot;&gt;}&lt;/span&gt;
-</code></pre>
-<p><span style=color:#f92672>}</span>
-</code></pre></div><h4 id=database-creation-and-configuration>Database creation and configuration</h4></p>
+	<span style=color:#66d9ef>public</span> BufferedImage <span style=color:#a6e22e>fromByteBuffer</span><span style=color:#f92672>(</span>ByteBuffer entry<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+		BufferedImage out <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>;</span>
+		<span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
+			out <span style=color:#f92672>=</span> ImageIO<span style=color:#f92672>.</span><span style=color:#a6e22e>read</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> ByteBufferBackedInputStream<span style=color:#f92672>(</span>entry<span style=color:#f92672>));</span>
+		<span style=color:#f92672>}</span> <span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>IOException e<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+			<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>;</span>
+		<span style=color:#f92672>}</span>
+		<span style=color:#66d9ef>return</span> out<span style=color:#f92672>;</span>
+	<span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><h4 id=database-creation-and-configuration>Database creation and configuration</h4>
 <p>Database is the generic class, which needs to be specialized by key and value types.
 If you want to create and configure your database, you have to call <code>setValueConverter()</code>
 and <code>setKeyConverter()</code> methods, and make sure their types correspond with Database key and value types.</p>
@@ -362,7 +361,7 @@ and <code>setKeyConverter()</code> methods, and make sure their types correspond
 		<span style=color:#f92672>.</span><span style=color:#a6e22e>setForceCreate</span><span style=color:#f92672>(</span><span style=color:#66d9ef>true</span><span style=color:#f92672>)</span>
 		<span style=color:#f92672>.</span><span style=color:#a6e22e>build</span><span style=color:#f92672>();</span>
 </code></pre></div><h5 id=opening-already-existing-database>Opening already existing database</h5>
-<p>For persistent engines, database may be created by your application during a previous run or e.g. by <a href=https://pmem.io/pmdk/pmempool/>pmempool</a> tool.
+<p>For persistent engines, database may be created by your application during a previous run or e.g. by <a href=/pmdk/pmempool/>pmempool</a> tool.
 In such case, you have to specify only a path and converter objects.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>db <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Database<span style=color:#f92672>.</span><span style=color:#a6e22e>Builder</span><span style=color:#f92672>&lt;</span>String<span style=color:#f92672>,</span> BufferedImage<span style=color:#f92672>&gt;(</span>engine<span style=color:#f92672>)</span>
 		<span style=color:#f92672>.</span><span style=color:#a6e22e>setPath</span><span style=color:#f92672>(</span>Path<span style=color:#f92672>)</span>
@@ -391,7 +390,7 @@ and can directly read data stored in the database.</p>
 	<span style=color:#f92672>});</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><h3 id=whats-next>What&rsquo;s next?</h3>
-<p>Currently pmemkv-java 1.0 API is compatibile with pmemkv 1.0 API. In upcoming releases we are
+<p>Currently pmemkv-java 1.0 API is compatible with pmemkv 1.0 API. In upcoming releases we are
 going to implement features available in new pmemkv versions.</p>
 <div class=clear></div>
 <div class="si-share border-0 d-flex justify-content-between align-items-center">
@@ -426,7 +425,7 @@ going to implement features available in new pmemkv versions.</p>
 <a href="https://pmem.io/blog/2021/02/using-memkind-in-hazelcast/?ref=footer">&lArr; Using Memkind in Hazelcast</a>
 </div>
 <div class="col-12 col-md-auto text-center">
-<a href="https://pmem.io/blog/2020/09/memkeydb-redis-with-persistent-memory/?ref=footer">MemKeyDB - Redis with... &rArr;</a>
+<a href="https://pmem.io/blog/2020/09/tieredmemdb-redis-with-persistent-memory/?ref=footer">TieredMemDB - Redis with... &rArr;</a>
 </div>
 </div>
 <div class=line></div>
@@ -520,17 +519,24 @@ going to implement features available in new pmemkv versions.</p>
 <div class="widget clearfix">
 <h4>Tag Cloud</h4>
 <div class=tagcloud>
-<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/pmem class=block role=button>pmem</a>
+<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/ndctl class=block role=button>ndctl</a>
 <a href=/tags/daxctl class=block role=button>daxctl</a>
+<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/async class=block role=button>async</a>
+<a href=/tags/asynchronous class=block role=button>asynchronous</a>
+<a href=/tags/concurrency class=block role=button>concurrency</a>
 <a href=/tags/configure class=block role=button>configure</a>
 <a href=/tags/dax class=block role=button>dax</a>
 <a href=/tags/install class=block role=button>install</a>
-<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/miniasync class=block role=button>miniasync</a>
 <a href=/tags/setup class=block role=button>setup</a>
+<a href=/tags/dml class=block role=button>dml</a>
+<a href=/tags/dsa class=block role=button>dsa</a>
 <a href=/tags/faq class=block role=button>faq</a>
 <a href=/tags/imdb class=block role=button>imdb</a>
+<a href=/tags/pmem2 class=block role=button>pmem2</a>
 <a href=/tags/sanitize class=block role=button>sanitize</a>
 <a href=/tags/secure-erase class=block role=button>secure-erase</a>
 <a href=/tags/sql class=block role=button>sql</a>
@@ -538,18 +544,11 @@ going to implement features available in new pmemkv versions.</p>
 <a href=/tags/blogs class=block role=button>blogs</a>
 <a href=/tags/crash class=block role=button>crash</a>
 <a href=/tags/create class=block role=button>create</a>
+<a href=/tags/cxl class=block role=button>cxl</a>
 <a href=/tags/database class=block role=button>database</a>
 <a href=/tags/destroy class=block role=button>destroy</a>
 <a href=/tags/developer class=block role=button>developer</a>
 <a href=/tags/direct-access class=block role=button>direct-access</a>
-<a href=/tags/emulate class=block role=button>emulate</a>
-<a href=/tags/fpga class=block role=button>fpga</a>
-<a href=/tags/fsck class=block role=button>fsck</a>
-<a href=/tags/gpu class=block role=button>gpu</a>
-<a href=/tags/hang class=block role=button>hang</a>
-<a href=/tags/how-to class=block role=button>how-to</a>
-<a href=/tags/howto class=block role=button>howto</a>
-<a href=/tags/in-memory-database class=block role=button>in-memory-database</a>
 </div>
 </div>
 </div>
@@ -581,7 +580,7 @@ going to implement features available in new pmemkv versions.</p>
 <a href=https://pmem.io/terms.html>Terms</a>
 </div>
 <div class="col-lg-auto text-center mt-0">
-<p>Copyright &copy; 2021 pmem.io</p>
+<p>Copyright &copy; 2022 pmem.io</p>
 </div>
 </div>
 </div>

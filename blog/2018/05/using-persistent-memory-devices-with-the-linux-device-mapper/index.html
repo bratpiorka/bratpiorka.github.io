@@ -106,18 +106,18 @@ This article focuses on using the &lsquo;striped&rsquo; (dm-stripe) and &lsquo;l
 <div class="mega-menu-column sub-menu-container col-lg-4 border-bottom py-4">
 <div class=feature-box>
 <div class="fbox-content h-bg-light">
-<a href=https://memkeydb.io>
-<p>MemKeyDB <i class=icon-angle-right></i></p>
-</a>
-</div>
-<div class="fbox-content h-bg-light">
 <a href=http://memkind.github.io/memkind/>
-<p>MemKind <i class=icon-angle-right></i></p>
+<p>Memkind <i class=icon-angle-right></i></p>
 </a>
 </div>
 <div class="fbox-content h-bg-light">
 <a href=/community/#newsletter>
 <p>Newsletter <i class=icon-angle-right></i></p>
+</a>
+</div>
+<div class="fbox-content h-bg-light">
+<a href=https://tieredmemdb.github.io/>
+<p>TieredMemDB <i class=icon-angle-right></i></p>
 </a>
 </div>
 </div>
@@ -314,9 +314,9 @@ Linux
 <p>This article focuses on using the &lsquo;striped&rsquo; (<strong>dm-stripe</strong>) and &lsquo;linear&rsquo; (<strong>dm-linear</strong>) target drivers with persistent memory devices to create virtual devices on which direct access (DAX) enabled filesystems can be created. Both XFS and EXT4 have native DAX support.</p>
 <p>The Linux device mapper is a framework provided by the kernel for mapping physical block devices onto higher-level virtual block devices. The device mapper works by passing data from a virtual block device, which is provided by the device mapper itself, to another block device. Several mapping targets exist - cache, crypt, delay, era, error, flakey, linear, mirror, multipath, raid, snapshot, striped, thin, and zero.</p>
 <p>Support for persistent memory devices and emulation of devices is present in Kernel v4.0 or later.  Kernel v4.2 or newer has the feature is enabled by default. Kernel v4.15 or newer is recommended for production as it has performance improvements.</p>
-<p>DAX support is a feature of the individual device-mapper target driver. Not all target drivers have or require DAX support. Both the &lsquo;linear&rsquo; and &lsquo;stripe&rsquo; target drivers have the DAX feature. The downside of these configurations is when a single device fails, access to the data also fails. Applications will need to be designed to handle all failure conditions. On the plus side, creating virtual devices allows for more flexible configuration options. DAX has not been added to the &lsquo;raid&rsquo; module due to metadata overhead, IO to page alignment requirements, and performance reasons. Data can be protected and replicated using &lsquo;replication pool sets&rsquo; which you can read more about in &lsquo;<a href=https://pmem.io/blog/2015/11/an-introduction-to-replication/>An Introduction to Replication</a>&rsquo;.</p>
+<p>DAX support is a feature of the individual device-mapper target driver. Not all target drivers have or require DAX support. Both the &lsquo;linear&rsquo; and &lsquo;stripe&rsquo; target drivers have the DAX feature. The downside of these configurations is when a single device fails, access to the data also fails. Applications will need to be designed to handle all failure conditions. On the plus side, creating virtual devices allows for more flexible configuration options. DAX has not been added to the &lsquo;raid&rsquo; module due to metadata overhead, IO to page alignment requirements, and performance reasons. Data can be protected and replicated using &lsquo;replication pool sets&rsquo; which you can read more about in &lsquo;<a href=/blog/2015/11/an-introduction-to-replication/>An Introduction to Replication</a>&rsquo;.</p>
 <p>The <code>dmsetup</code> utility is a low-level tool used to create and manage devices. Linux Volume Manager (LVM) commands also allow the creation of logical volumes using all DAX capable devices, such as pmem. The logical volume inherits DAX features if created using DAX devices. Once a logical volume is set to DAX capable, the volume may not be extended with non-DAX capable devices.</p>
-<p>The rest of this article assumes either physical or emulated persistent memory devices exist and are accessible via /dev/pmem{N}. Refer to <a href=https://pmem.io/blog/2016/02/how-to-emulate-persistent-memory>How To Emulate Persistent Memory</a> for instructions.</p>
+<p>The rest of this article assumes either physical or emulated persistent memory devices exist and are accessible via /dev/pmem{N}. Refer to <a href=/blog/2016/02/how-to-emulate-persistent-memory>How To Emulate Persistent Memory</a> for instructions.</p>
 <br>
 #### IO Alignment Considerations
 <p>Traditional storage devices such as Hard Disk Drives, SSD&rsquo;s, NVMe, and SAN LUNs present storage as blocks. A block is an addressable unit of storage measured in bytes. The traditional block size used by hard disks is 512 bytes. Newer devices commonly use 4KiB or 8KiB physical block sizes, but may also choose to present logical/emulated 512 bytes blocks.</p>
@@ -819,17 +819,24 @@ This article has shown how to use the Linux Device Mapper with Persistent Memory
 <div class="widget clearfix">
 <h4>Tag Cloud</h4>
 <div class=tagcloud>
-<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/pmem class=block role=button>pmem</a>
+<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/ndctl class=block role=button>ndctl</a>
 <a href=/tags/daxctl class=block role=button>daxctl</a>
+<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/async class=block role=button>async</a>
+<a href=/tags/asynchronous class=block role=button>asynchronous</a>
+<a href=/tags/concurrency class=block role=button>concurrency</a>
 <a href=/tags/configure class=block role=button>configure</a>
 <a href=/tags/dax class=block role=button>dax</a>
 <a href=/tags/install class=block role=button>install</a>
-<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/miniasync class=block role=button>miniasync</a>
 <a href=/tags/setup class=block role=button>setup</a>
+<a href=/tags/dml class=block role=button>dml</a>
+<a href=/tags/dsa class=block role=button>dsa</a>
 <a href=/tags/faq class=block role=button>faq</a>
 <a href=/tags/imdb class=block role=button>imdb</a>
+<a href=/tags/pmem2 class=block role=button>pmem2</a>
 <a href=/tags/sanitize class=block role=button>sanitize</a>
 <a href=/tags/secure-erase class=block role=button>secure-erase</a>
 <a href=/tags/sql class=block role=button>sql</a>
@@ -837,18 +844,11 @@ This article has shown how to use the Linux Device Mapper with Persistent Memory
 <a href=/tags/blogs class=block role=button>blogs</a>
 <a href=/tags/crash class=block role=button>crash</a>
 <a href=/tags/create class=block role=button>create</a>
+<a href=/tags/cxl class=block role=button>cxl</a>
 <a href=/tags/database class=block role=button>database</a>
 <a href=/tags/destroy class=block role=button>destroy</a>
 <a href=/tags/developer class=block role=button>developer</a>
 <a href=/tags/direct-access class=block role=button>direct-access</a>
-<a href=/tags/emulate class=block role=button>emulate</a>
-<a href=/tags/fpga class=block role=button>fpga</a>
-<a href=/tags/fsck class=block role=button>fsck</a>
-<a href=/tags/gpu class=block role=button>gpu</a>
-<a href=/tags/hang class=block role=button>hang</a>
-<a href=/tags/how-to class=block role=button>how-to</a>
-<a href=/tags/howto class=block role=button>howto</a>
-<a href=/tags/in-memory-database class=block role=button>in-memory-database</a>
 </div>
 </div>
 </div>
@@ -880,7 +880,7 @@ This article has shown how to use the Linux Device Mapper with Persistent Memory
 <a href=https://pmem.io/terms.html>Terms</a>
 </div>
 <div class="col-lg-auto text-center mt-0">
-<p>Copyright &copy; 2021 pmem.io</p>
+<p>Copyright &copy; 2022 pmem.io</p>
 </div>
 </div>
 </div>

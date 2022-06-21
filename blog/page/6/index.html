@@ -103,18 +103,18 @@
 <div class="mega-menu-column sub-menu-container col-lg-4 border-bottom py-4">
 <div class=feature-box>
 <div class="fbox-content h-bg-light">
-<a href=https://memkeydb.io>
-<p>MemKeyDB <i class=icon-angle-right></i></p>
-</a>
-</div>
-<div class="fbox-content h-bg-light">
 <a href=http://memkind.github.io/memkind/>
-<p>MemKind <i class=icon-angle-right></i></p>
+<p>Memkind <i class=icon-angle-right></i></p>
 </a>
 </div>
 <div class="fbox-content h-bg-light">
 <a href=/community/#newsletter>
 <p>Newsletter <i class=icon-angle-right></i></p>
+</a>
+</div>
+<div class="fbox-content h-bg-light">
+<a href=https://tieredmemdb.github.io/>
+<p>TieredMemDB <i class=icon-angle-right></i></p>
 </a>
 </div>
 </div>
@@ -302,16 +302,16 @@
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2018/11/c-persistent-containers/ data-lightbox=image><img src=/images/pmem_logo.png alt="C++ persistent containers"></a>
+<a href=https://pmem.io/blog/2019/02/c-persistent-containers-vector/ data-lightbox=image><img src=/images/pmem_logo.png alt="C++ persistent containers - vector"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2018/11/c-persistent-containers/>C++ persistent containers</a></h2>
+<h2><a href=https://pmem.io/blog/2019/02/c-persistent-containers-vector/>C++ persistent containers - vector</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> Nov 20, 2018</li>
+<li><i class=icon-calendar3></i> Feb 20, 2019</li>
 <li><i class=icon-user></i>Szyrom</li>
 <li>
 <i class=icon-folder-open></i>
@@ -320,8 +320,8 @@ Libpmemobj-Cpp
 </ul>
 </div>
 <div class=entry-content>
-<p>PMEM containers Our goal for the libpmemobj C++ bindings is to create a friendly and less error prone API for persistent memory programming. Even with persistent memory pool allocators, convenient interface for creating and managing transactions, auto-snapshotting class templates and smart …</p>
-<a href=https://pmem.io/blog/2018/11/c-persistent-containers/ class=more-link>Read More</a>
+<p>[Note: pmem::obj::vector&lt;> is no longer experimental. The rest of the information in this blog post is still accurate.] Introduction The main idea behind pmem containers is to fully exploit persistent memory potential by designing optimized on-media layouts and algorithms for persistent memory …</p>
+<a href=https://pmem.io/blog/2019/02/c-persistent-containers-vector/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -332,26 +332,27 @@ Libpmemobj-Cpp
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2018/11/c-persistent-containers-array/ data-lightbox=image><img src=/images/pmem_logo.png alt="C++ persistent containers - array"></a>
+<a href=https://pmem.io/blog/2019/02/pmreorder-basics/ data-lightbox=image><img src=/images/pmem_logo.png alt="Pmreorder basics"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2018/11/c-persistent-containers-array/>C++ persistent containers - array</a></h2>
+<h2><a href=https://pmem.io/blog/2019/02/pmreorder-basics/>Pmreorder basics</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> Nov 2, 2018</li>
-<li><i class=icon-user></i>Igchor</li>
+<li><i class=icon-calendar3></i> Feb 4, 2019</li>
+<li><i class=icon-user></i>Wlemkows</li>
 <li>
 <i class=icon-folder-open></i>
-Libpmemobj-Cpp
+Pmreorder
 </li>
 </ul>
 </div>
 <div class=entry-content>
-<p>Introduction Until now, our C++ bindings were missing one important component - persistent containers. In 1.5 release we have introduced the first one - pmem::obj::array. This container is currently placed in experimental namespace and folder (this means that both API and layout can change). It has …</p>
-<a href=https://pmem.io/blog/2018/11/c-persistent-containers-array/ class=more-link>Read More</a>
+<p>Introduction It’s good practice to run persistent memory application under pmemcheck - a tool which is described here and here.
+In this post, we are going to learn about another tool for persistence correctness checking. As you might already know if you’ve read posts linked above, …</p>
+<a href=https://pmem.io/blog/2019/02/pmreorder-basics/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -362,26 +363,26 @@ Libpmemobj-Cpp
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2018/10/new-release-of-pmdk/ data-lightbox=image><img src=/images/pmem_logo.png alt="New release of PMDK"></a>
+<a href=https://pmem.io/blog/2019/02/pool-conversion-tool/ data-lightbox=image><img src=/images/pmem_logo.png alt="Pool conversion tool"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2018/10/new-release-of-pmdk/>New release of PMDK</a></h2>
+<h2><a href=https://pmem.io/blog/2019/02/pool-conversion-tool/>Pool conversion tool</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> Oct 22, 2018</li>
-<li><i class=icon-user></i>Pbalcer</li>
+<li><i class=icon-calendar3></i> Feb 1, 2019</li>
+<li><i class=icon-user></i>Lplewa</li>
 <li>
 <i class=icon-folder-open></i>
-PMDK
+Pmdk
 </li>
 </ul>
 </div>
 <div class=entry-content>
-<p>We’ve been very quiet on this blog as of late, mostly because of the amount of work that we needed to put into our very ambitiously planned 1.5 release. But we’ve made it, and there’s finally time to get back to discussing the technical minutiae of our work. In this post, we will …</p>
-<a href=https://pmem.io/blog/2018/10/new-release-of-pmdk/ class=more-link>Read More</a>
+<p>Introduction When we published the first PMDK stable release, we committed to maintaining stable on-media layout. This means that all future PMDK changes have to be backward compatible. Unfortunately, we weren’t successful in adhering to the strict requirements which would be needed to …</p>
+<a href=https://pmem.io/blog/2019/02/pool-conversion-tool/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -392,26 +393,27 @@ PMDK
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2018/06/running-fio-with-pmem-engines/ data-lightbox=image><img src=/images/pmem_logo.png alt="Running FIO with pmem engines"></a>
+<a href=https://pmem.io/blog/2019/01/extended-memcpy-in-pmdk-1.5/ data-lightbox=image><img src=/images/pmem_logo.png alt="Extended memcpy in PMDK 1.5"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2018/06/running-fio-with-pmem-engines/>Running FIO with pmem engines</a></h2>
+<h2><a href=https://pmem.io/blog/2019/01/extended-memcpy-in-pmdk-1.5/>Extended memcpy in PMDK 1.5</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> Jun 25, 2018</li>
-<li><i class=icon-user></i>Lukaszstolarczuk</li>
+<li><i class=icon-calendar3></i> Jan 22, 2019</li>
+<li><i class=icon-user></i>Marcinslusarz</li>
 <li>
 <i class=icon-folder-open></i>
-FIO
+Memcpy
 </li>
 </ul>
 </div>
 <div class=entry-content>
-<p>When we, the PMDK team, want to check performance of our library, either to see if there was any regression or if our tweaks did a good job, we run benchmarks. One of them is FIO. It helps us simulate synthetic traffic of reads and writes to a pmem device. In this blog post I will introduce this …</p>
-<a href=https://pmem.io/blog/2018/06/running-fio-with-pmem-engines/ class=more-link>Read More</a>
+<p>In PMDK 1.5 we added new APIs for bulk persistent memory modifications. In short, we did this to:
+give applications the ability to perform low-level performance optimizations clean up the naming scheme In order to understand what exactly and why we did that, let’s review the old API. In PMDK …</p>
+<a href=https://pmem.io/blog/2019/01/extended-memcpy-in-pmdk-1.5/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -422,27 +424,27 @@ FIO
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2018/05/using-persistent-memory-devices-with-the-linux-device-mapper/ data-lightbox=image><img src=/images/pmem_logo.png alt="Using Persistent Memory Devices with the Linux Device Mapper"></a>
+<a href=https://pmem.io/blog/2018/12/pool-features/ data-lightbox=image><img src=/images/pmem_logo.png alt="Pool features"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2018/05/using-persistent-memory-devices-with-the-linux-device-mapper/>Using Persistent Memory Devices with the Linux Device Mapper</a></h2>
+<h2><a href=https://pmem.io/blog/2018/12/pool-features/>Pool features</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> May 15, 2018</li>
-<li><i class=icon-user></i>Sscargal</li>
+<li><i class=icon-calendar3></i> Dec 5, 2018</li>
+<li><i class=icon-user></i>Janekmi</li>
 <li>
 <i class=icon-folder-open></i>
-Linux
+Pool_features
 </li>
 </ul>
 </div>
 <div class=entry-content>
-<p><h4 id=introduction-x86x64-systems-do-not-typically-interleave-persistent-memory-devices-also-referred-to-as-lsquomodulesrsquo-or-lsquodimmsrsquo-across-sockets-so-a-two-socket-system-will-have-two-separate-interleave-setsto-use-these-interleave-sets-as-a-single-device-requires-using-a->Introduction X86/X64 systems do not typically interleave Persistent Memory Devices (also referred to as ‘modules’ or ‘DIMMs’) across sockets, so a two-socket system will have two separate interleave sets. To use these interleave sets as a single device requires using a …</h4>
-</p>
-<a href=https://pmem.io/blog/2018/05/using-persistent-memory-devices-with-the-linux-device-mapper/ class=more-link>Read More</a>
+<p>Introduction Since the very first release, PMDK pools had internal feature flags. They were mostly a hidden implementation detail. The more observant users might have noticed pool features listing in pmempool info output, but that’s about it.
+Release 1.5 introduced a set of new feature flags. …</p>
+<a href=https://pmem.io/blog/2018/12/pool-features/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -475,7 +477,7 @@ Linux
 <a href=/blog/page/7/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/blog/page/16/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/blog/page/18/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></div>
 </div>
@@ -504,24 +506,26 @@ Linux
 <h4 class="fw-normal mt-2"><a href=/blogs/llpl/ class=text-capitalize>llpl (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/macros/ class=text-capitalize>macros (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/memcpy/ class=text-capitalize>memcpy (1)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/memkeydb/ class=text-capitalize>memkeydb (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/memkind/ class=text-capitalize>memkind (4)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/model/ class=text-capitalize>model (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/multithreaded/ class=text-capitalize>multithreaded (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/mysql/ class=text-capitalize>mysql (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/perf300/ class=text-capitalize>perf300 (2)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/performance/ class=text-capitalize>performance (1)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (7)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (11)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem/ class=text-capitalize>pmem (4)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem.io/ class=text-capitalize>pmem.io (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem_emulation/ class=text-capitalize>pmem_emulation (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmemcheck/ class=text-capitalize>pmemcheck (2)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmemkv/ class=text-capitalize>pmemkv (5)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmemobjfs/ class=text-capitalize>pmemobjfs (1)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/pmemstream/ class=text-capitalize>pmemstream (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmreorder/ class=text-capitalize>pmreorder (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pool_features/ class=text-capitalize>pool_features (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/replication/ class=text-capitalize>replication (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/report/ class=text-capitalize>report (4)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/similaritysearch/ class=text-capitalize>similaritysearch (1)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/tieredmemdb/ class=text-capitalize>tieredmemdb (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/translation/ class=text-capitalize>translation (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/vmem/ class=text-capitalize>vmem (1)</a></h4>
 </div>
@@ -533,17 +537,24 @@ Linux
 <div class="widget clearfix">
 <h4>Tag Cloud</h4>
 <div class=tagcloud>
-<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/pmem class=block role=button>pmem</a>
+<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/ndctl class=block role=button>ndctl</a>
 <a href=/tags/daxctl class=block role=button>daxctl</a>
+<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/async class=block role=button>async</a>
+<a href=/tags/asynchronous class=block role=button>asynchronous</a>
+<a href=/tags/concurrency class=block role=button>concurrency</a>
 <a href=/tags/configure class=block role=button>configure</a>
 <a href=/tags/dax class=block role=button>dax</a>
 <a href=/tags/install class=block role=button>install</a>
-<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/miniasync class=block role=button>miniasync</a>
 <a href=/tags/setup class=block role=button>setup</a>
+<a href=/tags/dml class=block role=button>dml</a>
+<a href=/tags/dsa class=block role=button>dsa</a>
 <a href=/tags/faq class=block role=button>faq</a>
 <a href=/tags/imdb class=block role=button>imdb</a>
+<a href=/tags/pmem2 class=block role=button>pmem2</a>
 <a href=/tags/sanitize class=block role=button>sanitize</a>
 <a href=/tags/secure-erase class=block role=button>secure-erase</a>
 <a href=/tags/sql class=block role=button>sql</a>
@@ -551,18 +562,11 @@ Linux
 <a href=/tags/blogs class=block role=button>blogs</a>
 <a href=/tags/crash class=block role=button>crash</a>
 <a href=/tags/create class=block role=button>create</a>
+<a href=/tags/cxl class=block role=button>cxl</a>
 <a href=/tags/database class=block role=button>database</a>
 <a href=/tags/destroy class=block role=button>destroy</a>
 <a href=/tags/developer class=block role=button>developer</a>
 <a href=/tags/direct-access class=block role=button>direct-access</a>
-<a href=/tags/emulate class=block role=button>emulate</a>
-<a href=/tags/fpga class=block role=button>fpga</a>
-<a href=/tags/fsck class=block role=button>fsck</a>
-<a href=/tags/gpu class=block role=button>gpu</a>
-<a href=/tags/hang class=block role=button>hang</a>
-<a href=/tags/how-to class=block role=button>how-to</a>
-<a href=/tags/howto class=block role=button>howto</a>
-<a href=/tags/in-memory-database class=block role=button>in-memory-database</a>
 </div>
 </div>
 </div>
@@ -594,7 +598,7 @@ Linux
 <a href=https://pmem.io/terms.html>Terms</a>
 </div>
 <div class="col-lg-auto text-center mt-0">
-<p>Copyright &copy; 2021 pmem.io</p>
+<p>Copyright &copy; 2022 pmem.io</p>
 </div>
 </div>
 </div>

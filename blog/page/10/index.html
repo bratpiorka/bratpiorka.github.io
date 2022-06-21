@@ -103,18 +103,18 @@
 <div class="mega-menu-column sub-menu-container col-lg-4 border-bottom py-4">
 <div class=feature-box>
 <div class="fbox-content h-bg-light">
-<a href=https://memkeydb.io>
-<p>MemKeyDB <i class=icon-angle-right></i></p>
-</a>
-</div>
-<div class="fbox-content h-bg-light">
 <a href=http://memkind.github.io/memkind/>
-<p>MemKind <i class=icon-angle-right></i></p>
+<p>Memkind <i class=icon-angle-right></i></p>
 </a>
 </div>
 <div class="fbox-content h-bg-light">
 <a href=/community/#newsletter>
 <p>Newsletter <i class=icon-angle-right></i></p>
+</a>
+</div>
+<div class="fbox-content h-bg-light">
+<a href=https://tieredmemdb.github.io/>
+<p>TieredMemDB <i class=icon-angle-right></i></p>
 </a>
 </div>
 </div>
@@ -302,116 +302,27 @@
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2016/05/c-bindings-for-libpmemobj-part-6-transactions/ data-lightbox=image><img src=/images/pmem_logo.png alt="C++ bindings for libpmemobj (part 6) - transactions"></a>
+<a href=https://pmem.io/blog/2017/01/whats-coming-in-libpmemobj/ data-lightbox=image><img src=/images/pmem_logo.png alt="What's coming in libpmemobj"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2016/05/c-bindings-for-libpmemobj-part-6-transactions/>C++ bindings for libpmemobj (part 6) - transactions</a></h2>
+<h2><a href=https://pmem.io/blog/2017/01/whats-coming-in-libpmemobj/>What's coming in libpmemobj</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> May 25, 2016</li>
-<li><i class=icon-user></i>Tomaszkapela</li>
-<li>
-<i class=icon-folder-open></i>
-Libpmemobj
-</li>
-</ul>
-</div>
-<div class=entry-content>
-<p>As I mentioned in my previous blog post, transactions are the heart of libpmemobj. That is why we had to take utmost care while designing their C++ versions, so that they are as easy to use as possible. There are, however, a couple of compromises we had to make due to the inadequacies of the C++11 …</p>
-<a href=https://pmem.io/blog/2016/05/c-bindings-for-libpmemobj-part-6-transactions/ class=more-link>Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id=posts class="row grid-container gutter-40">
-<div class="entry col-12">
-<div class="grid-inner row g-0">
-<div class=col-md-4>
-<div class=entry-image>
-<a href=https://pmem.io/blog/2016/05/c-bindings-for-libpmemobj-part-5-make_persistent/ data-lightbox=image><img src=/images/pmem_logo.png alt="C++ bindings for libpmemobj (part 5) - make_persistent"></a>
-</div>
-</div>
-<div class="col-md-8 ps-md-4">
-<div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2016/05/c-bindings-for-libpmemobj-part-5-make_persistent/>C++ bindings for libpmemobj (part 5) - make_persistent</a></h2>
-</div>
-<div class=entry-meta>
-<ul>
-<li><i class=icon-calendar3></i> May 19, 2016</li>
-<li><i class=icon-user></i>Tomaszkapela</li>
-<li>
-<i class=icon-folder-open></i>
-Libpmemobj
-</li>
-</ul>
-</div>
-<div class=entry-content>
-<p>One of the most important features of the C++ bindings to libpmemobj is the persistent_ptr smart pointer template. While using it is fairly straightforward, the allocation and object construction with the use of the C API is hard to get right. So like it’s C++ standard’s counterparts, it …</p>
-<a href=https://pmem.io/blog/2016/05/c-bindings-for-libpmemobj-part-5-make_persistent/ class=more-link>Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id=posts class="row grid-container gutter-40">
-<div class="entry col-12">
-<div class="grid-inner row g-0">
-<div class=col-md-4>
-<div class=entry-image>
-<a href=https://pmem.io/blog/2016/05/c-bindings-for-libpmemobj-part-4-pool-handle-wrapper/ data-lightbox=image><img src=/images/pmem_logo.png alt="C++ bindings for libpmemobj (part 4) - pool handle wrapper"></a>
-</div>
-</div>
-<div class="col-md-8 ps-md-4">
-<div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2016/05/c-bindings-for-libpmemobj-part-4-pool-handle-wrapper/>C++ bindings for libpmemobj (part 4) - pool handle wrapper</a></h2>
-</div>
-<div class=entry-meta>
-<ul>
-<li><i class=icon-calendar3></i> May 10, 2016</li>
-<li><i class=icon-user></i>Tomaszkapela</li>
-<li>
-<i class=icon-folder-open></i>
-Libpmemobj
-</li>
-</ul>
-</div>
-<div class=entry-content>
-<p>One of the necessary steps in developing the C++ libpmemobj bindings was the introduction of an abstraction of the C pool handle. We decided to do a very simple hierarchy where the pool template inherits from a generic pool_base. This was necessary to be able to have functions/methods which do not …</p>
-<a href=https://pmem.io/blog/2016/05/c-bindings-for-libpmemobj-part-4-pool-handle-wrapper/ class=more-link>Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id=posts class="row grid-container gutter-40">
-<div class="entry col-12">
-<div class="grid-inner row g-0">
-<div class=col-md-4>
-<div class=entry-image>
-<a href=https://pmem.io/blog/2016/02/persistent-allocator-design-fragmentation/ data-lightbox=image><img src=/images/pmem_logo.png alt="Persistent allocator design - fragmentation"></a>
-</div>
-</div>
-<div class="col-md-8 ps-md-4">
-<div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2016/02/persistent-allocator-design-fragmentation/>Persistent allocator design - fragmentation</a></h2>
-</div>
-<div class=entry-meta>
-<ul>
-<li><i class=icon-calendar3></i> Feb 25, 2016</li>
+<li><i class=icon-calendar3></i> Jan 25, 2017</li>
 <li><i class=icon-user></i>Pbalcer</li>
 <li>
 <i class=icon-folder-open></i>
-Fragmentation
+Report
 </li>
 </ul>
 </div>
 <div class=entry-content>
-<p>Implementing a memory allocator is a balance between numerous properties with the two most important being time and space constraints. Making the malloc/free routines reasonably fast is a must for the implementation to be considered usable at all. The algorithm also mustn’t waste excessive …</p>
-<a href=https://pmem.io/blog/2016/02/persistent-allocator-design-fragmentation/ class=more-link>Read More</a>
+<p>In my last post I’ve made a promise to share our plans for the near future. So here it is: 4 ideas that we are planning to ship with the upcoming version of libpmemobj.
+Please note that most of our plans related to libpmemobj are available on our github issues page with the …</p>
+<a href=https://pmem.io/blog/2017/01/whats-coming-in-libpmemobj/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -422,26 +333,118 @@ Fragmentation
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2016/02/how-to-emulate-persistent-memory/ data-lightbox=image><img src=/images/pmem_logo.png alt="How to emulate Persistent Memory"></a>
+<a href=https://pmem.io/blog/2017/01/modeling-strings-with-libpmemobj-c-bindings/ data-lightbox=image><img src=/images/pmem_logo.png alt="Modeling strings with libpmemobj C++ bindings"></a>
 </div>
 </div>
 <div class="col-md-8 ps-md-4">
 <div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2016/02/how-to-emulate-persistent-memory/>How to emulate Persistent Memory</a></h2>
+<h2><a href=https://pmem.io/blog/2017/01/modeling-strings-with-libpmemobj-c-bindings/>Modeling strings with libpmemobj C++ bindings</a></h2>
 </div>
 <div class=entry-meta>
 <ul>
-<li><i class=icon-calendar3></i> Feb 22, 2016</li>
-<li><i class=icon-user></i>Maciej Maciejewski</li>
+<li><i class=icon-calendar3></i> Jan 23, 2017</li>
+<li><i class=icon-user></i>RobDickinson</li>
 <li>
 <i class=icon-folder-open></i>
-Pmem_emulation
+Libpmemobj
 </li>
 </ul>
 </div>
 <div class=entry-content>
-<p>Data allocated with PMDK is put to the virtual memory address space, and concrete ranges are relying on result of mmap(2) operation performed on the user defined files. Such files can exist on any storage media, however data consistency assurance embedded within PMDK requires frequent …</p>
-<a href=https://pmem.io/blog/2016/02/how-to-emulate-persistent-memory/ class=more-link>Read More</a>
+<p>C++ developers using libpmemobj have more than one option for modeling strings, depending on the size of the strings and whether they are fixed or varying in length. In this post we’ll review the representations that work, known variations to avoid, and finally present a persistent string …</p>
+<a href=https://pmem.io/blog/2017/01/modeling-strings-with-libpmemobj-c-bindings/ class=more-link>Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=posts class="row grid-container gutter-40">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class=col-md-4>
+<div class=entry-image>
+<a href=https://pmem.io/blog/2016/12/pmdk-for-windows/ data-lightbox=image><img src=/images/pmem_logo.png alt="PMDK for Windows"></a>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2><a href=https://pmem.io/blog/2016/12/pmdk-for-windows/>PMDK for Windows</a></h2>
+</div>
+<div class=entry-meta>
+<ul>
+<li><i class=icon-calendar3></i> Dec 21, 2016</li>
+<li><i class=icon-user></i>Peluse</li>
+<li>
+<i class=icon-folder-open></i>
+PMDK
+</li>
+</ul>
+</div>
+<div class=entry-content>
+<p>Throughout 2016 a team of engineers from Microsoft, Intel, HPE and HPI have been working to port the PMDK project to Windows and we are happy to announce that Technical Preview release is now available!
+Our main goal in porting the library was to make it as easy as possible for developers to use the …</p>
+<a href=https://pmem.io/blog/2016/12/pmdk-for-windows/ class=more-link>Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=posts class="row grid-container gutter-40">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class=col-md-4>
+<div class=entry-image>
+<a href=https://pmem.io/blog/2016/12/libpmemobj-a-year-in-review/ data-lightbox=image><img src=/images/pmem_logo.png alt="libpmemobj - a year in review"></a>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2><a href=https://pmem.io/blog/2016/12/libpmemobj-a-year-in-review/>libpmemobj - a year in review</a></h2>
+</div>
+<div class=entry-meta>
+<ul>
+<li><i class=icon-calendar3></i> Dec 20, 2016</li>
+<li><i class=icon-user></i>Pbalcer</li>
+<li>
+<i class=icon-folder-open></i>
+Libpmemobj
+</li>
+</ul>
+</div>
+<div class=entry-content>
+<p>It’s been a while since the last post on our blog, but we’ve been busy with the recently released 1.2 version of the library. It comes packed with improvements all throughout the code base and it also brings a handful of new features that we hope will end up being useful.
+With the year …</p>
+<a href=https://pmem.io/blog/2016/12/libpmemobj-a-year-in-review/ class=more-link>Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=posts class="row grid-container gutter-40">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class=col-md-4>
+<div class=entry-image>
+<a href=https://pmem.io/blog/2016/06/c-bindings-for-libpmemobj-epilogue-converting-existing-applications/ data-lightbox=image><img src=/images/pmem_logo.png alt="C++ bindings for libpmemobj (epilogue) - converting existing applications"></a>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2><a href=https://pmem.io/blog/2016/06/c-bindings-for-libpmemobj-epilogue-converting-existing-applications/>C++ bindings for libpmemobj (epilogue) - converting existing applications</a></h2>
+</div>
+<div class=entry-meta>
+<ul>
+<li><i class=icon-calendar3></i> Jun 2, 2016</li>
+<li><i class=icon-user></i>Tomaszkapela</li>
+<li>
+<i class=icon-folder-open></i>
+Libpmemobj
+</li>
+</ul>
+</div>
+<div class=entry-content>
+<p>During the development of the C++ bindings, we wrote a couple of examples and even more tests. But these are new applications written from scratch to understand persistence. While this approach is OK for newly developed apps, there is a lot of existing code out there that is not designed for …</p>
+<a href=https://pmem.io/blog/2016/06/c-bindings-for-libpmemobj-epilogue-converting-existing-applications/ class=more-link>Read More</a>
 </div>
 </div>
 </div>
@@ -474,7 +477,7 @@ Pmem_emulation
 <a href=/blog/page/11/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/blog/page/16/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/blog/page/18/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></div>
 </div>
@@ -503,24 +506,26 @@ Pmem_emulation
 <h4 class="fw-normal mt-2"><a href=/blogs/llpl/ class=text-capitalize>llpl (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/macros/ class=text-capitalize>macros (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/memcpy/ class=text-capitalize>memcpy (1)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/memkeydb/ class=text-capitalize>memkeydb (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/memkind/ class=text-capitalize>memkind (4)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/model/ class=text-capitalize>model (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/multithreaded/ class=text-capitalize>multithreaded (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/mysql/ class=text-capitalize>mysql (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/perf300/ class=text-capitalize>perf300 (2)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/performance/ class=text-capitalize>performance (1)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (7)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (11)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem/ class=text-capitalize>pmem (4)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem.io/ class=text-capitalize>pmem.io (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem_emulation/ class=text-capitalize>pmem_emulation (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmemcheck/ class=text-capitalize>pmemcheck (2)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmemkv/ class=text-capitalize>pmemkv (5)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmemobjfs/ class=text-capitalize>pmemobjfs (1)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/pmemstream/ class=text-capitalize>pmemstream (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmreorder/ class=text-capitalize>pmreorder (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pool_features/ class=text-capitalize>pool_features (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/replication/ class=text-capitalize>replication (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/report/ class=text-capitalize>report (4)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/similaritysearch/ class=text-capitalize>similaritysearch (1)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/tieredmemdb/ class=text-capitalize>tieredmemdb (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/translation/ class=text-capitalize>translation (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/vmem/ class=text-capitalize>vmem (1)</a></h4>
 </div>
@@ -532,17 +537,24 @@ Pmem_emulation
 <div class="widget clearfix">
 <h4>Tag Cloud</h4>
 <div class=tagcloud>
-<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/pmem class=block role=button>pmem</a>
+<a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
 <a href=/tags/ndctl class=block role=button>ndctl</a>
 <a href=/tags/daxctl class=block role=button>daxctl</a>
+<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/async class=block role=button>async</a>
+<a href=/tags/asynchronous class=block role=button>asynchronous</a>
+<a href=/tags/concurrency class=block role=button>concurrency</a>
 <a href=/tags/configure class=block role=button>configure</a>
 <a href=/tags/dax class=block role=button>dax</a>
 <a href=/tags/install class=block role=button>install</a>
-<a href=/tags/pmdk class=block role=button>pmdk</a>
+<a href=/tags/miniasync class=block role=button>miniasync</a>
 <a href=/tags/setup class=block role=button>setup</a>
+<a href=/tags/dml class=block role=button>dml</a>
+<a href=/tags/dsa class=block role=button>dsa</a>
 <a href=/tags/faq class=block role=button>faq</a>
 <a href=/tags/imdb class=block role=button>imdb</a>
+<a href=/tags/pmem2 class=block role=button>pmem2</a>
 <a href=/tags/sanitize class=block role=button>sanitize</a>
 <a href=/tags/secure-erase class=block role=button>secure-erase</a>
 <a href=/tags/sql class=block role=button>sql</a>
@@ -550,18 +562,11 @@ Pmem_emulation
 <a href=/tags/blogs class=block role=button>blogs</a>
 <a href=/tags/crash class=block role=button>crash</a>
 <a href=/tags/create class=block role=button>create</a>
+<a href=/tags/cxl class=block role=button>cxl</a>
 <a href=/tags/database class=block role=button>database</a>
 <a href=/tags/destroy class=block role=button>destroy</a>
 <a href=/tags/developer class=block role=button>developer</a>
 <a href=/tags/direct-access class=block role=button>direct-access</a>
-<a href=/tags/emulate class=block role=button>emulate</a>
-<a href=/tags/fpga class=block role=button>fpga</a>
-<a href=/tags/fsck class=block role=button>fsck</a>
-<a href=/tags/gpu class=block role=button>gpu</a>
-<a href=/tags/hang class=block role=button>hang</a>
-<a href=/tags/how-to class=block role=button>how-to</a>
-<a href=/tags/howto class=block role=button>howto</a>
-<a href=/tags/in-memory-database class=block role=button>in-memory-database</a>
 </div>
 </div>
 </div>
@@ -593,7 +598,7 @@ Pmem_emulation
 <a href=https://pmem.io/terms.html>Terms</a>
 </div>
 <div class="col-lg-auto text-center mt-0">
-<p>Copyright &copy; 2021 pmem.io</p>
+<p>Copyright &copy; 2022 pmem.io</p>
 </div>
 </div>
 </div>
