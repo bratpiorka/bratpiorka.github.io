@@ -302,68 +302,6 @@
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2015/09/challenges-of-multi-threaded-transactions/ data-lightbox=image><img src=/images/pmem_logo.png alt="Challenges of multi-threaded transactions"></a>
-</div>
-</div>
-<div class="col-md-8 ps-md-4">
-<div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2015/09/challenges-of-multi-threaded-transactions/>Challenges of multi-threaded transactions</a></h2>
-</div>
-<div class=entry-meta>
-<ul>
-<li><i class=icon-calendar3></i> Sep 16, 2015</li>
-<li><i class=icon-user></i>Pbalcer</li>
-<li>
-<i class=icon-folder-open></i>
-Multithreaded
-</li>
-</ul>
-</div>
-<div class=entry-content>
-<p>Our library currently does not support threads cooperating (writing) within a single transaction. It does shift a lot of work from the library onto the user who now has to think about different parallelization solutions.
-This was a conscious decision with iterative approach to creating the library …</p>
-<a href=https://pmem.io/blog/2015/09/challenges-of-multi-threaded-transactions/ class=more-link>Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id=posts class="row grid-container gutter-40">
-<div class="entry col-12">
-<div class="grid-inner row g-0">
-<div class=col-md-4>
-<div class=entry-image>
-<a href=https://pmem.io/blog/2015/09/kv-store-improved-measured/ data-lightbox=image><img src=/images/pmem_logo.png alt="KV-store improved & measured"></a>
-</div>
-</div>
-<div class="col-md-8 ps-md-4">
-<div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2015/09/kv-store-improved-measured/>KV-store improved & measured</a></h2>
-</div>
-<div class=entry-meta>
-<ul>
-<li><i class=icon-calendar3></i> Sep 10, 2015</li>
-<li><i class=icon-user></i>Pbalcer</li>
-<li>
-<i class=icon-folder-open></i>
-Kvstore
-</li>
-</ul>
-</div>
-<div class=entry-content>
-<p>As promised in the previous post about the kv-store implementation I’m back with new results after implementing the optimizations I devised a month ago. As a bonus I implemented a red-black tree to have a fair comparison between two data structures that allocate similar number of nodes.
-tl;dr: …</p>
-<a href=https://pmem.io/blog/2015/09/kv-store-improved-measured/ class=more-link>Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id=posts class="row grid-container gutter-40">
-<div class="entry col-12">
-<div class="grid-inner row g-0">
-<div class=col-md-4>
-<div class=entry-image>
 <a href=https://pmem.io/blog/2015/07/transactional-key-value-store-using-libpmemobj-diy/ data-lightbox=image><img src=/images/pmem_logo.png alt="Transactional key-value store using libpmemobj - DIY"></a>
 </div>
 </div>
@@ -449,6 +387,66 @@ Pmemcheck
 </div>
 </div>
 </div>
+<div id=posts class="row grid-container gutter-40">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class=col-md-4>
+<div class=entry-image>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-7-persistent-lists/ data-lightbox=image><img src=/images/pmem_logo.png alt="An introduction to pmemobj (part 7) - persistent lists"></a>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2><a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-7-persistent-lists/>An introduction to pmemobj (part 7) - persistent lists</a></h2>
+</div>
+<div class=entry-meta>
+<ul>
+<li><i class=icon-calendar3></i> Jun 19, 2015</li>
+<li><i class=icon-user></i>Pbalcer</li>
+<li>
+<i class=icon-folder-open></i>
+Libpmemobj
+</li>
+</ul>
+</div>
+<div class=entry-content>
+<p>The pmemobj library provides non-transactional persistent atomic circular doubly-linked lists (or NTPACDLL for short) API with an interface familiar to anyone who have ever included sys/queue.h header file - it’s in fact so similar that I considered not writing this post at all, you can just …</p>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-7-persistent-lists/ class=more-link>Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=posts class="row grid-container gutter-40">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class=col-md-4>
+<div class=entry-image>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-5-atomic-dynamic-memory-allocation/ data-lightbox=image><img src=/images/pmem_logo.png alt="An introduction to pmemobj (part 5) - atomic dynamic memory allocation"></a>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2><a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-5-atomic-dynamic-memory-allocation/>An introduction to pmemobj (part 5) - atomic dynamic memory allocation</a></h2>
+</div>
+<div class=entry-meta>
+<ul>
+<li><i class=icon-calendar3></i> Jun 18, 2015</li>
+<li><i class=icon-user></i>Pbalcer</li>
+<li>
+<i class=icon-folder-open></i>
+Libpmemobj
+</li>
+</ul>
+</div>
+<div class=entry-content>
+<p>In the previous post I talked about using transactions for allocating new objects, which is fine and is the most similar approach to the standard POSIX way. But it does add an overhead of maintaining an undo log of changes. A more optimal memory management can be achieved using the non-transactional …</p>
+<a href=https://pmem.io/blog/2015/06/an-introduction-to-pmemobj-part-5-atomic-dynamic-memory-allocation/ class=more-link>Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="col-12 mt-4">
 <ul class="pagination pagination-default">
 <li class=page-item>
@@ -476,7 +474,7 @@ Pmemcheck
 <a href=/blog/page/15/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/blog/page/18/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/blog/page/17/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></div>
 </div>
@@ -511,7 +509,7 @@ Pmemcheck
 <h4 class="fw-normal mt-2"><a href=/blogs/mysql/ class=text-capitalize>mysql (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/perf300/ class=text-capitalize>perf300 (2)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/performance/ class=text-capitalize>performance (1)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (12)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (11)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem/ class=text-capitalize>pmem (4)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem.io/ class=text-capitalize>pmem.io (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem_emulation/ class=text-capitalize>pmem_emulation (1)</a></h4>
@@ -523,7 +521,6 @@ Pmemcheck
 <h4 class="fw-normal mt-2"><a href=/blogs/pool_features/ class=text-capitalize>pool_features (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/replication/ class=text-capitalize>replication (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/report/ class=text-capitalize>report (4)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/similaritysearch/ class=text-capitalize>similaritysearch (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/tieredmemdb/ class=text-capitalize>tieredmemdb (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/translation/ class=text-capitalize>translation (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/vmem/ class=text-capitalize>vmem (1)</a></h4>
@@ -536,8 +533,8 @@ Pmemcheck
 <div class="widget clearfix">
 <h4>Tag Cloud</h4>
 <div class=tagcloud>
-<a href=/tags/pmem class=block role=button>pmem</a>
 <a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
+<a href=/tags/pmem class=block role=button>pmem</a>
 <a href=/tags/ndctl class=block role=button>ndctl</a>
 <a href=/tags/daxctl class=block role=button>daxctl</a>
 <a href=/tags/pmdk class=block role=button>pmdk</a>
@@ -553,7 +550,6 @@ Pmemcheck
 <a href=/tags/dsa class=block role=button>dsa</a>
 <a href=/tags/faq class=block role=button>faq</a>
 <a href=/tags/imdb class=block role=button>imdb</a>
-<a href=/tags/memkind class=block role=button>memkind</a>
 <a href=/tags/pmem2 class=block role=button>pmem2</a>
 <a href=/tags/sanitize class=block role=button>sanitize</a>
 <a href=/tags/secure-erase class=block role=button>secure-erase</a>
@@ -566,6 +562,7 @@ Pmemcheck
 <a href=/tags/database class=block role=button>database</a>
 <a href=/tags/destroy class=block role=button>destroy</a>
 <a href=/tags/developer class=block role=button>developer</a>
+<a href=/tags/direct-access class=block role=button>direct-access</a>
 </div>
 </div>
 </div>

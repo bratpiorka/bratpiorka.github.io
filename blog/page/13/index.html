@@ -302,67 +302,6 @@
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2016/01/c-bindings-for-libpmemobj-part-3-persistent-queue-example/ data-lightbox=image><img src=/images/pmem_logo.png alt="C++ bindings for libpmemobj (part 3) - persistent queue example"></a>
-</div>
-</div>
-<div class="col-md-8 ps-md-4">
-<div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2016/01/c-bindings-for-libpmemobj-part-3-persistent-queue-example/>C++ bindings for libpmemobj (part 3) - persistent queue example</a></h2>
-</div>
-<div class=entry-meta>
-<ul>
-<li><i class=icon-calendar3></i> Jan 12, 2016</li>
-<li><i class=icon-user></i>Pbalcer</li>
-<li>
-<i class=icon-folder-open></i>
-Libpmemobj
-</li>
-</ul>
-</div>
-<div class=entry-content>
-<p>The best way to learn to code is usually by implementing an example. We are going to be creating a linked-list based queue data structure using the the pmem::obj::p and pmem::obj::persistent_ptr classes and libpmemobj C API. But first, a little bit of CS 101 :)
-Linked-list queue Queue is a …</p>
-<a href=https://pmem.io/blog/2016/01/c-bindings-for-libpmemobj-part-3-persistent-queue-example/ class=more-link>Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id=posts class="row grid-container gutter-40">
-<div class="entry col-12">
-<div class="grid-inner row g-0">
-<div class=col-md-4>
-<div class=entry-image>
-<a href=https://pmem.io/blog/2015/12/performance-improvements/ data-lightbox=image><img src=/images/pmem_logo.png alt="Performance improvements"></a>
-</div>
-</div>
-<div class="col-md-8 ps-md-4">
-<div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2015/12/performance-improvements/>Performance improvements</a></h2>
-</div>
-<div class=entry-meta>
-<ul>
-<li><i class=icon-calendar3></i> Dec 15, 2015</li>
-<li><i class=icon-user></i>Tomaszkapela</li>
-<li>
-<i class=icon-folder-open></i>
-Performance
-</li>
-</ul>
-</div>
-<div class=entry-content>
-<p>I would like to inform you about the performance improvements that have been going on in PMDK and libpmemobj in particular. We have not been standing still and we are trying out a couple of ideas on how to make our libraries even faster. Some of the improvements are smaller, some are larger. Some of …</p>
-<a href=https://pmem.io/blog/2015/12/performance-improvements/ class=more-link>Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id=posts class="row grid-container gutter-40">
-<div class="entry col-12">
-<div class="grid-inner row g-0">
-<div class=col-md-4>
-<div class=entry-image>
 <a href=https://pmem.io/blog/2015/11/an-introduction-to-replication/ data-lightbox=image><img src=/images/pmem_logo.png alt="An introduction to replication"></a>
 </div>
 </div>
@@ -451,6 +390,68 @@ NOTE: This is just an example implementation of file system in user space using 
 </div>
 </div>
 </div>
+<div id=posts class="row grid-container gutter-40">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class=col-md-4>
+<div class=entry-image>
+<a href=https://pmem.io/blog/2015/09/challenges-of-multi-threaded-transactions/ data-lightbox=image><img src=/images/pmem_logo.png alt="Challenges of multi-threaded transactions"></a>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2><a href=https://pmem.io/blog/2015/09/challenges-of-multi-threaded-transactions/>Challenges of multi-threaded transactions</a></h2>
+</div>
+<div class=entry-meta>
+<ul>
+<li><i class=icon-calendar3></i> Sep 16, 2015</li>
+<li><i class=icon-user></i>Pbalcer</li>
+<li>
+<i class=icon-folder-open></i>
+Multithreaded
+</li>
+</ul>
+</div>
+<div class=entry-content>
+<p>Our library currently does not support threads cooperating (writing) within a single transaction. It does shift a lot of work from the library onto the user who now has to think about different parallelization solutions.
+This was a conscious decision with iterative approach to creating the library …</p>
+<a href=https://pmem.io/blog/2015/09/challenges-of-multi-threaded-transactions/ class=more-link>Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=posts class="row grid-container gutter-40">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class=col-md-4>
+<div class=entry-image>
+<a href=https://pmem.io/blog/2015/09/kv-store-improved-measured/ data-lightbox=image><img src=/images/pmem_logo.png alt="KV-store improved & measured"></a>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2><a href=https://pmem.io/blog/2015/09/kv-store-improved-measured/>KV-store improved & measured</a></h2>
+</div>
+<div class=entry-meta>
+<ul>
+<li><i class=icon-calendar3></i> Sep 10, 2015</li>
+<li><i class=icon-user></i>Pbalcer</li>
+<li>
+<i class=icon-folder-open></i>
+Kvstore
+</li>
+</ul>
+</div>
+<div class=entry-content>
+<p>As promised in the previous post about the kv-store implementation I’m back with new results after implementing the optimizations I devised a month ago. As a bonus I implemented a red-black tree to have a fair comparison between two data structures that allocate similar number of nodes.
+tl;dr: …</p>
+<a href=https://pmem.io/blog/2015/09/kv-store-improved-measured/ class=more-link>Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="col-12 mt-4">
 <ul class="pagination pagination-default">
 <li class=page-item>
@@ -478,7 +479,7 @@ NOTE: This is just an example implementation of file system in user space using 
 <a href=/blog/page/14/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/blog/page/18/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/blog/page/17/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></div>
 </div>
@@ -513,7 +514,7 @@ NOTE: This is just an example implementation of file system in user space using 
 <h4 class="fw-normal mt-2"><a href=/blogs/mysql/ class=text-capitalize>mysql (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/perf300/ class=text-capitalize>perf300 (2)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/performance/ class=text-capitalize>performance (1)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (12)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (11)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem/ class=text-capitalize>pmem (4)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem.io/ class=text-capitalize>pmem.io (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem_emulation/ class=text-capitalize>pmem_emulation (1)</a></h4>
@@ -525,7 +526,6 @@ NOTE: This is just an example implementation of file system in user space using 
 <h4 class="fw-normal mt-2"><a href=/blogs/pool_features/ class=text-capitalize>pool_features (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/replication/ class=text-capitalize>replication (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/report/ class=text-capitalize>report (4)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/similaritysearch/ class=text-capitalize>similaritysearch (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/tieredmemdb/ class=text-capitalize>tieredmemdb (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/translation/ class=text-capitalize>translation (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/vmem/ class=text-capitalize>vmem (1)</a></h4>
@@ -538,8 +538,8 @@ NOTE: This is just an example implementation of file system in user space using 
 <div class="widget clearfix">
 <h4>Tag Cloud</h4>
 <div class=tagcloud>
-<a href=/tags/pmem class=block role=button>pmem</a>
 <a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
+<a href=/tags/pmem class=block role=button>pmem</a>
 <a href=/tags/ndctl class=block role=button>ndctl</a>
 <a href=/tags/daxctl class=block role=button>daxctl</a>
 <a href=/tags/pmdk class=block role=button>pmdk</a>
@@ -555,7 +555,6 @@ NOTE: This is just an example implementation of file system in user space using 
 <a href=/tags/dsa class=block role=button>dsa</a>
 <a href=/tags/faq class=block role=button>faq</a>
 <a href=/tags/imdb class=block role=button>imdb</a>
-<a href=/tags/memkind class=block role=button>memkind</a>
 <a href=/tags/pmem2 class=block role=button>pmem2</a>
 <a href=/tags/sanitize class=block role=button>sanitize</a>
 <a href=/tags/secure-erase class=block role=button>secure-erase</a>
@@ -568,6 +567,7 @@ NOTE: This is just an example implementation of file system in user space using 
 <a href=/tags/database class=block role=button>database</a>
 <a href=/tags/destroy class=block role=button>destroy</a>
 <a href=/tags/developer class=block role=button>developer</a>
+<a href=/tags/direct-access class=block role=button>direct-access</a>
 </div>
 </div>
 </div>

@@ -302,67 +302,6 @@
 <div class="grid-inner row g-0">
 <div class=col-md-4>
 <div class=entry-image>
-<a href=https://pmem.io/blog/2018/12/pool-features/ data-lightbox=image><img src=/images/pmem_logo.png alt="Pool features"></a>
-</div>
-</div>
-<div class="col-md-8 ps-md-4">
-<div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2018/12/pool-features/>Pool features</a></h2>
-</div>
-<div class=entry-meta>
-<ul>
-<li><i class=icon-calendar3></i> Dec 5, 2018</li>
-<li><i class=icon-user></i>Janekmi</li>
-<li>
-<i class=icon-folder-open></i>
-Pool_features
-</li>
-</ul>
-</div>
-<div class=entry-content>
-<p>Introduction Since the very first release, PMDK pools had internal feature flags. They were mostly a hidden implementation detail. The more observant users might have noticed pool features listing in pmempool info output, but that’s about it.
-Release 1.5 introduced a set of new feature flags. …</p>
-<a href=https://pmem.io/blog/2018/12/pool-features/ class=more-link>Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id=posts class="row grid-container gutter-40">
-<div class="entry col-12">
-<div class="grid-inner row g-0">
-<div class=col-md-4>
-<div class=entry-image>
-<a href=https://pmem.io/blog/2018/11/bad-blocks/ data-lightbox=image><img src=/images/pmem_logo.png alt="Bad blocks"></a>
-</div>
-</div>
-<div class="col-md-8 ps-md-4">
-<div class="entry-title title-sm">
-<h2><a href=https://pmem.io/blog/2018/11/bad-blocks/>Bad blocks</a></h2>
-</div>
-<div class=entry-meta>
-<ul>
-<li><i class=icon-calendar3></i> Nov 26, 2018</li>
-<li><i class=icon-user></i>Ldorau</li>
-<li>
-<i class=icon-folder-open></i>
-Blocks
-</li>
-</ul>
-</div>
-<div class=entry-content>
-<p>Introduction Over time, storage devices can acquire uncorrectable media errors often called “bad blocks”. A bad block is a part of a storage media that is either inaccessible or unwritable due to a permanent physical damage. In case of memory mapped I/O, if a process tries to access …</p>
-<a href=https://pmem.io/blog/2018/11/bad-blocks/ class=more-link>Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id=posts class="row grid-container gutter-40">
-<div class="entry col-12">
-<div class="grid-inner row g-0">
-<div class=col-md-4>
-<div class=entry-image>
 <a href=https://pmem.io/blog/2018/11/c-persistent-containers/ data-lightbox=image><img src=/images/pmem_logo.png alt="C++ persistent containers"></a>
 </div>
 </div>
@@ -448,6 +387,67 @@ PMDK
 </div>
 </div>
 </div>
+<div id=posts class="row grid-container gutter-40">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class=col-md-4>
+<div class=entry-image>
+<a href=https://pmem.io/blog/2018/06/running-fio-with-pmem-engines/ data-lightbox=image><img src=/images/pmem_logo.png alt="Running FIO with pmem engines"></a>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2><a href=https://pmem.io/blog/2018/06/running-fio-with-pmem-engines/>Running FIO with pmem engines</a></h2>
+</div>
+<div class=entry-meta>
+<ul>
+<li><i class=icon-calendar3></i> Jun 25, 2018</li>
+<li><i class=icon-user></i>Lukaszstolarczuk</li>
+<li>
+<i class=icon-folder-open></i>
+FIO
+</li>
+</ul>
+</div>
+<div class=entry-content>
+<p>When we, the PMDK team, want to check performance of our library, either to see if there was any regression or if our tweaks did a good job, we run benchmarks. One of them is FIO. It helps us simulate synthetic traffic of reads and writes to a pmem device. In this blog post I will introduce this …</p>
+<a href=https://pmem.io/blog/2018/06/running-fio-with-pmem-engines/ class=more-link>Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=posts class="row grid-container gutter-40">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class=col-md-4>
+<div class=entry-image>
+<a href=https://pmem.io/blog/2018/05/using-persistent-memory-devices-with-the-linux-device-mapper/ data-lightbox=image><img src=/images/pmem_logo.png alt="Using Persistent Memory Devices with the Linux Device Mapper"></a>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2><a href=https://pmem.io/blog/2018/05/using-persistent-memory-devices-with-the-linux-device-mapper/>Using Persistent Memory Devices with the Linux Device Mapper</a></h2>
+</div>
+<div class=entry-meta>
+<ul>
+<li><i class=icon-calendar3></i> May 15, 2018</li>
+<li><i class=icon-user></i>Sscargal</li>
+<li>
+<i class=icon-folder-open></i>
+Linux
+</li>
+</ul>
+</div>
+<div class=entry-content>
+<p><h4 id=introduction-x86x64-systems-do-not-typically-interleave-persistent-memory-devices-also-referred-to-as-lsquomodulesrsquo-or-lsquodimmsrsquo-across-sockets-so-a-two-socket-system-will-have-two-separate-interleave-setsto-use-these-interleave-sets-as-a-single-device-requires-using-a->Introduction X86/X64 systems do not typically interleave Persistent Memory Devices (also referred to as ‘modules’ or ‘DIMMs’) across sockets, so a two-socket system will have two separate interleave sets. To use these interleave sets as a single device requires using a …</h4>
+</p>
+<a href=https://pmem.io/blog/2018/05/using-persistent-memory-devices-with-the-linux-device-mapper/ class=more-link>Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="col-12 mt-4">
 <ul class="pagination pagination-default">
 <li class=page-item>
@@ -475,7 +475,7 @@ PMDK
 <a href=/blog/page/8/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/blog/page/18/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/blog/page/17/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></div>
 </div>
@@ -510,7 +510,7 @@ PMDK
 <h4 class="fw-normal mt-2"><a href=/blogs/mysql/ class=text-capitalize>mysql (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/perf300/ class=text-capitalize>perf300 (2)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/performance/ class=text-capitalize>performance (1)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (12)</a></h4>
+<h4 class="fw-normal mt-2"><a href=/blogs/pmdk/ class=text-capitalize>pmdk (11)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem/ class=text-capitalize>pmem (4)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem.io/ class=text-capitalize>pmem.io (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/pmem_emulation/ class=text-capitalize>pmem_emulation (1)</a></h4>
@@ -522,7 +522,6 @@ PMDK
 <h4 class="fw-normal mt-2"><a href=/blogs/pool_features/ class=text-capitalize>pool_features (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/replication/ class=text-capitalize>replication (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/report/ class=text-capitalize>report (4)</a></h4>
-<h4 class="fw-normal mt-2"><a href=/blogs/similaritysearch/ class=text-capitalize>similaritysearch (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/tieredmemdb/ class=text-capitalize>tieredmemdb (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/translation/ class=text-capitalize>translation (1)</a></h4>
 <h4 class="fw-normal mt-2"><a href=/blogs/vmem/ class=text-capitalize>vmem (1)</a></h4>
@@ -535,8 +534,8 @@ PMDK
 <div class="widget clearfix">
 <h4>Tag Cloud</h4>
 <div class=tagcloud>
-<a href=/tags/pmem class=block role=button>pmem</a>
 <a href=/tags/persistent-memory class=block role=button>persistent-memory</a>
+<a href=/tags/pmem class=block role=button>pmem</a>
 <a href=/tags/ndctl class=block role=button>ndctl</a>
 <a href=/tags/daxctl class=block role=button>daxctl</a>
 <a href=/tags/pmdk class=block role=button>pmdk</a>
@@ -552,7 +551,6 @@ PMDK
 <a href=/tags/dsa class=block role=button>dsa</a>
 <a href=/tags/faq class=block role=button>faq</a>
 <a href=/tags/imdb class=block role=button>imdb</a>
-<a href=/tags/memkind class=block role=button>memkind</a>
 <a href=/tags/pmem2 class=block role=button>pmem2</a>
 <a href=/tags/sanitize class=block role=button>sanitize</a>
 <a href=/tags/secure-erase class=block role=button>secure-erase</a>
@@ -565,6 +563,7 @@ PMDK
 <a href=/tags/database class=block role=button>database</a>
 <a href=/tags/destroy class=block role=button>destroy</a>
 <a href=/tags/developer class=block role=button>developer</a>
+<a href=/tags/direct-access class=block role=button>direct-access</a>
 </div>
 </div>
 </div>
