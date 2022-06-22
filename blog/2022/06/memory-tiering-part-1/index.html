@@ -314,7 +314,7 @@ DRAM is quite expensive and has limited capacity, so a solution we propose in th
 (and in the future other types of memory available through CXL - see a <a href=/blog/2022/01/disaggregated-memory-in-pursuit-of-scale-and-efficiency>pmem.io blog post about it</a>).
 PMEM can be used in two modes - <a href=/glossary/#memory-mode>Memory Mode</a> and <a href=/glossary/#app-direct>App Direct</a>. In Memory Mode,
 user sees DRAM and PMEM memory as single, combined memory node. In App Direct mode,
-when user <a href=/blog/2020/01/memkind-support-for-kmem-dax-option>configure PMEM as KMEM DAX</a>, the PMEM memory will be directly available in the system and visible
+when user <a href=/blog/2020/01/memkind-support-for-kmem-dax-option>configures PMEM as KMEM DAX</a>, the PMEM memory will be directly available in the system and visible
 as a separate NUMA node without a CPU.</p>
 <h2 id=memory-tiering---why-should-i-care>Memory tiering - why should I care?</h2>
 <p>The PMEM in KMEM DAX is available to the application just like regular memory.
